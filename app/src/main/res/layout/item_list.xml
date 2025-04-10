@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/item1"
+        android:id="@+id/image"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_margin="16dp"
@@ -23,11 +23,12 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/item1"
-        app:layout_constraintTop_toTopOf="@+id/item1"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image"
         tools:text="Name" />
 
     <TextView
+        android:id="@+id/tv_phone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="18sp"

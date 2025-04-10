@@ -1,27 +1,40 @@
 package com.devspace.recyclerview
 
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         enableEdgeToEdge()
+
+        val rvList = findViewById<RecyclerView>(R.id.rv_list)
+        val ivGrid = findViewById<ImageView>(R.id.iv_grid)
+        val ivList = findViewById<ImageView>(R.id.iv_list)
+        val adapter = ContactListAdapter()
+
+        rvList.adapter = adapter
+        rvList.layoutManager = LinearLayoutManager(this)
+
+        adapter.submitList(contacts)
+
+        ivGrid.setOnClickListener {
+            rvList.layoutManager = GridLayoutManager(this, 2)
+        }
+
+        ivList.setOnClickListener {
+            rvList.layoutManager = LinearLayoutManager(this)
+        }
     }
-
-    // Create data class
-    // Create list From data class type
-    // Create Adapter
-    // Set Adapter
-    // Linear layout manager
-
-    val rvList = findViewById<RecyclerView>(R.id.rv_list)
 }
 
-val contacts = listOf(
+private val contacts = listOf(
     Contact(
         "Geo",
         "(82) 988987412",
