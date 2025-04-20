@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Recyclerview</string>
     <string name="contacts_title">Contacts</string>
+    <string name="send_message_detail">Send Message</string>
+    <string name="share_contact">Share Contact</string>
+    <string name="block_contact">Block Contact</string>
 </resources>

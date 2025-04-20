@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactDetailActivity">
+
+    <ImageView
+        android:id="@+id/image_detail"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_name_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Geo"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/image_detail"
+        app:layout_constraintTop_toTopOf="@+id/image_detail" />
+
+    <TextView
+        android:id="@+id/tv_phone_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(75) 954236988"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_detail"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_detail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name_detail" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vertical_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5">
+    </androidx.constraintlayout.widget.Guideline>
+
+    <TextView
+        android:id="@+id/tv_send_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/send_message_detail"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_callend" />
+
+    <TextView
+        android:id="@+id/tv_share_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/share_contact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_send_message" />
+
+    <TextView
+        android:id="@+id/tv_block_ccontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/block_contact"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/image_detail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_share_contact" />
+
+    <ImageView
+        android:id="@+id/ic_callend"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@null"
+        android:padding="8dp"
+        android:src="@drawable/ic_callend"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vertical_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_detail" />
+
+    <ImageView
+        android:id="@+id/ic_call"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="8dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_vertical_detail"
+        app:layout_constraintTop_toTopOf="@+id/ic_callend"
+        app:tint="@android:color/holo_green_dark" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
